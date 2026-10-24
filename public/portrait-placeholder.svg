@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141721"/>
+      <stop offset="50%" stop-color="#0E1017"/>
+      <stop offset="100%" stop-color="#181B26"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#252A38" stroke-width="0.75" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="480" rx="20" fill="url(#bgGrad)"/>
+  <rect width="400" height="480" rx="20" fill="url(#grid)"/>
+  <rect width="400" height="480" rx="20" fill="url(#glowGrad)"/>
+
+  <!-- Subtle border -->
+  <rect x="1" y="1" width="398" height="478" rx="19" stroke="#2C3244" stroke-width="1.5"/>
+
+  <!-- Geometric Abstract Silhouette / Monogram -->
+  <g transform="translate(140, 120)">
+    <!-- Head / Circle -->
+    <circle cx="60" cy="55" r="46" fill="#1A1E2B" stroke="#3A4259" stroke-width="2"/>
+    <circle cx="60" cy="55" r="38" fill="#141722"/>
+    
+    <!-- Monogram MARK centered in avatar -->
+    <text x="60" y="61" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700" fill="url(#accentGrad)" letter-spacing="2">MARK</text>
+    
+    <!-- Shoulders / Torso -->
+    <path d="M-10 170 C-10 120, 130 120, 130 170" fill="#1A1E2B" stroke="#3A4259" stroke-width="2"/>
+  </g>
+
+  <!-- Corner Brackets (Developer aesthetic) -->
+  <path d="M 24 36 L 24 24 L 36 24" stroke="#818CF8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 376 36 L 376 24 L 364 24" stroke="#818CF8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 24 444 L 24 456 L 36 456" stroke="#818CF8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 376 444 L 376 456 L 364 456" stroke="#818CF8" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Status / Replacement Label -->
+  <g transform="translate(200, 360)">
+    <rect x="-120" y="0" width="240" height="34" rx="17" fill="#151822" stroke="#2E3447" stroke-width="1"/>
+    <circle cx="-95" cy="17" r="4" fill="#10B981"/>
+    <text x="-80" y="22" font-family="'Inter', sans-serif" font-size="11" font-weight="500" fill="#E2E8F0">PORTRAIT PLACEHOLDER</text>
+  </g>
+  <text x="200" y="420" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#7E879B">Replace at /src/assets/portrait.jpg</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" fill="none">
+  <rect width="600" height="340" rx="12" fill="#0C0E14" />
+  <rect x="1" y="1" width="598" height="338" rx="11" stroke="#222838" stroke-width="1.5" />
+
+  <!-- Code/Terminal header -->
+  <rect x="0" y="0" width="600" height="38" rx="12" fill="#141722" />
+  <rect x="0" y="28" width="600" height="10" fill="#141722" />
+  <line x1="0" y1="38" x2="600" y2="38" stroke="#222838" stroke-width="1" />
+  
+  <circle cx="24" cy="19" r="5" fill="#EF4444" opacity="0.8"/>
+  <circle cx="42" cy="19" r="5" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="60" cy="19" r="5" fill="#10B981" opacity="0.8"/>
+  <text x="300" y="24" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#7E879B">electricity_forecast_xgboost.py // Time-Series</text>
+
+  <!-- Left: Time Series Plot Visual -->
+  <g transform="translate(35, 60)">
+    <rect x="0" y="0" width="245" height="235" rx="10" fill="#11141E" stroke="#232A3B" stroke-width="1"/>
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="10" fill="#7E879B">HOURLY DEMAND (MW) VS TIME</text>
+    
+    <!-- Grid lines -->
+    <line x1="30" y1="50" x2="225" y2="50" stroke="#1E2536" stroke-width="1"/>
+    <line x1="30" y1="90" x2="225" y2="90" stroke="#1E2536" stroke-width="1"/>
+    <line x1="30" y1="130" x2="225" y2="130" stroke="#1E2536" stroke-width="1"/>
+    <line x1="30" y1="170" x2="225" y2="170" stroke="#1E2536" stroke-width="1"/>
+    
+    <!-- Axes -->
+    <line x1="30" y1="40" x2="30" y2="180" stroke="#333D52" stroke-width="1.5"/>
+    <line x1="30" y1="180" x2="225" y2="180" stroke="#333D52" stroke-width="1.5"/>
+
+    <!-- Actual curve (Blue) -->
+    <path d="M 30 140 Q 60 70, 90 120 T 150 90 T 210 130" fill="none" stroke="#60A5FA" stroke-width="2"/>
+    
+    <!-- Predicted curve (Indigo / Lavender dotted) -->
+    <path d="M 30 145 Q 60 75, 90 115 T 150 95 T 210 125" fill="none" stroke="#C084FC" stroke-width="2" stroke-dasharray="3 3"/>
+
+    <!-- Legend -->
+    <line x1="40" y1="205" x2="60" y2="205" stroke="#60A5FA" stroke-width="2"/>
+    <text x="65" y="209" font-family="'JetBrains Mono', monospace" font-size="9" fill="#E2E8F0">Actual</text>
+    
+    <line x1="120" y1="205" x2="140" y2="205" stroke="#C084FC" stroke-width="2" stroke-dasharray="3 3"/>
+    <text x="145" y="209" font-family="'JetBrains Mono', monospace" font-size="9" fill="#E2E8F0">XGBoost Predicted</text>
+  </g>
+
+  <!-- Right: Regression & Error Metrics -->
+  <g transform="translate(305, 60)">
+    <!-- Metric 1: R^2 Score -->
+    <rect x="0" y="0" width="260" height="68" rx="8" fill="#121622" stroke="#242B3D" stroke-width="1"/>
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="10" fill="#7E879B">COEFFICIENT OF DETERMINATION</text>
+    <text x="16" y="52" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="700" fill="#34D399">78.96% <tspan font-size="13" font-weight="500" fill="#9CA3AF">R² Score</tspan></text>
+
+    <!-- Metric 2: MAE & RMSE -->
+    <rect x="0" y="80" width="260" height="74" rx="8" fill="#121622" stroke="#242B3D" stroke-width="1"/>
+    <text x="16" y="102" font-family="'JetBrains Mono', monospace" font-size="10" fill="#7E879B">HOLD-OUT ERROR METRICS</text>
+    <text x="16" y="125" font-family="'JetBrains Mono', monospace" font-size="11" fill="#E2E8F0">MAE:  <tspan fill="#818CF8" font-weight="600">2,226.59 MW</tspan></text>
+    <text x="16" y="143" font-family="'JetBrains Mono', monospace" font-size="11" fill="#E2E8F0">RMSE: <tspan fill="#818CF8" font-weight="600">2,961.58 MW</tspan></text>
+
+    <!-- Metric 3: Feature Engineering -->
+    <rect x="0" y="166" width="260" height="69" rx="8" fill="#121622" stroke="#242B3D" stroke-width="1"/>
+    <text x="16" y="188" font-family="'JetBrains Mono', monospace" font-size="10" fill="#7E879B">TIME-BASED FEATURES</text>
+    <text x="16" y="210" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#E2E8F0">Hour, Day, Month, Lags</text>
+    <text x="16" y="226" font-family="'JetBrains Mono', monospace" font-size="10" fill="#10B981">● Chronological train-test split</text>
+  </g>
+</svg>

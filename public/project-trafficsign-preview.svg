@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" fill="none">
+  <rect width="600" height="340" rx="12" fill="#0C0E14" />
+  <rect x="1" y="1" width="598" height="338" rx="11" stroke="#222838" stroke-width="1.5" />
+
+  <!-- Terminal top bar -->
+  <rect x="0" y="0" width="600" height="38" rx="12" fill="#141722" />
+  <rect x="0" y="28" width="600" height="10" fill="#141722" />
+  <line x1="0" y1="38" x2="600" y2="38" stroke="#222838" stroke-width="1" />
+  
+  <circle cx="24" cy="19" r="5" fill="#EF4444" opacity="0.8"/>
+  <circle cx="42" cy="19" r="5" fill="#F59E0B" opacity="0.8"/>
+  <circle cx="60" cy="19" r="5" fill="#10B981" opacity="0.8"/>
+  <text x="300" y="24" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#7E879B">yolov8_inference.py // Ultralytics Vision</text>
+
+  <!-- Left: YOLO Bounding Box Detection Visual -->
+  <g transform="translate(35, 60)">
+    <rect x="0" y="0" width="240" height="235" rx="10" fill="#11141E" stroke="#232A3B" stroke-width="1"/>
+    
+    <!-- Stylized Camera / Street View Frame -->
+    <path d="M 20 20 L 40 20" stroke="#818CF8" stroke-width="2"/>
+    <path d="M 20 20 L 20 40" stroke="#818CF8" stroke-width="2"/>
+    <path d="M 220 20 L 200 20" stroke="#818CF8" stroke-width="2"/>
+    <path d="M 220 20 L 220 40" stroke="#818CF8" stroke-width="2"/>
+
+    <!-- Detected Sign 1: Speed Limit -->
+    <g transform="translate(40, 55)">
+      <!-- Bounding Box -->
+      <rect x="0" y="0" width="80" height="90" fill="none" stroke="#EF4444" stroke-width="2"/>
+      <rect x="0" y="-18" width="76" height="18" fill="#EF4444"/>
+      <text x="4" y="-5" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#FFFFFF">Speed 60: 0.96</text>
+      <!-- Circular Sign Inside -->
+      <circle cx="40" cy="45" r="30" fill="#FFFFFF" stroke="#EF4444" stroke-width="5"/>
+      <text x="40" y="52" text-anchor="middle" font-family="'Inter', sans-serif" font-size="16" font-weight="800" fill="#111827">60</text>
+    </g>
+
+    <!-- Detected Sign 2: Stop / Warning -->
+    <g transform="translate(135, 100)">
+      <rect x="0" y="0" width="70" height="75" fill="none" stroke="#F59E0B" stroke-width="2"/>
+      <rect x="0" y="-18" width="68" height="18" fill="#F59E0B"/>
+      <text x="4" y="-5" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#111827">Yield: 0.94</text>
+      <!-- Triangle Sign -->
+      <polygon points="35,12 12,56 58,56" fill="#FEE2E2" stroke="#EF4444" stroke-width="3"/>
+    </g>
+
+    <text x="120" y="215" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#9CA3AF">Image &amp; Video Inference</text>
+  </g>
+
+  <!-- Right: Quantitative YOLO Evaluation Metrics -->
+  <g transform="translate(300, 60)">
+    <!-- Metric 1: mAP@50 -->
+    <rect x="0" y="0" width="265" height="68" rx="8" fill="#121622" stroke="#242B3D" stroke-width="1"/>
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="10" fill="#7E879B">MEAN AVERAGE PRECISION (mAP)</text>
+    <text x="16" y="52" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="700" fill="#818CF8">93.8% <tspan font-size="12" font-weight="400" fill="#9CA3AF">mAP@50</tspan></text>
+    <text x="155" y="52" font-family="'JetBrains Mono', monospace" font-size="12" fill="#C084FC">79.8% @50–95</text>
+
+    <!-- Metric 2: Precision & Recall -->
+    <rect x="0" y="80" width="265" height="74" rx="8" fill="#121622" stroke="#242B3D" stroke-width="1"/>
+    <text x="16" y="102" font-family="'JetBrains Mono', monospace" font-size="10" fill="#7E879B">CONFUSION MATRIX EVALUATION</text>
+    <text x="16" y="125" font-family="'JetBrains Mono', monospace" font-size="12" fill="#E2E8F0">Precision: <tspan fill="#34D399" font-weight="700">94.2%</tspan></text>
+    <text x="16" y="143" font-family="'JetBrains Mono', monospace" font-size="12" fill="#E2E8F0">Recall:    <tspan fill="#60A5FA" font-weight="700">84.9%</tspan></text>
+
+    <!-- Metric 3: Model Family -->
+    <rect x="0" y="166" width="265" height="69" rx="8" fill="#121622" stroke="#242B3D" stroke-width="1"/>
+    <text x="16" y="188" font-family="'JetBrains Mono', monospace" font-size="10" fill="#7E879B">ARCHITECTURE &amp; TOOLING</text>
+    <text x="16" y="210" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#E2E8F0">Custom YOLOv8 · Ultralytics</text>
+    <text x="16" y="226" font-family="'JetBrains Mono', monospace" font-size="10" fill="#10B981">● Video and static image inference</text>
+  </g>
+</svg>
